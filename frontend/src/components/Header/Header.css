@@ -1,16 +1,15 @@
 
-.headerStyle{
-    padding: 3%;
-    background-color: #1db954;
-    color: white;
+.navbar-div{
+    background-color: #e63946;
 }
 
-.button{
+.nav-button{
     font-size: 120%;
+    color: #f1faee;
 }
 
-.button:hover{
-    color: white;
+.nav-button:hover{
+    color: #a8dadc;
 }
 
 .Home{
