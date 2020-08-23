@@ -12,7 +12,7 @@ class Database{
         mongoose.connect(`mongodb://${this.host}:${this.port}/${this.database}`,
         { useNewUrlParser : true, useUnifiedTopology: true}
         ).then( () => console.log('Connected to MongoDB'))
-        .catch( err => console.log(err)) 
+        .catch( err => console.error(err)) 
     }
 }
 
