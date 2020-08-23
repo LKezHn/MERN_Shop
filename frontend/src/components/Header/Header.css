@@ -1,0 +1,35 @@
+
+.headerStyle{
+    padding: 3%;
+    background-color: #1db954;
+    color: white;
+}
+
+.button{
+    font-size: 120%;
+}
+
+.button:hover{
+    color: white;
+}
+
+.Home{
+    border-color: transparent;
+    background-color: transparent;
+    cursor: pointer;
+    float: left;
+}
+
+.Clients{
+    border-color: transparent;
+    background-color: transparent;
+    cursor: pointer;
+    float: right;
+}
+
+.Companies{
+    border-color: transparent;
+    background-color: transparent;
+    cursor: pointer;
+    float: right;
+}
