@@ -1,0 +1,38 @@
+
+.first-landing{
+    position: fixed;
+    width: 100%;
+    z-index: -1;
+}
+
+.body{
+    background-color: rgba(29, 57, 87,0.5);
+}
+
+.title{
+    background-color: transparent;
+    font-size: 200%;
+    color: #f1faee;
+    text-align: center;
+}
+
+.subtitle{
+    color: #a8dadc;
+}
+
+.login-card{
+    background-color: rgba(29, 57, 87,0.6);
+    color: #a8dadc;
+    padding: 1%;
+}
+
+.subcontent{
+    background-color: transparent;
+    color: #f1faee;
+    text-align: center;
+    padding: 1%;
+}
+
+.content{
+    background-color: transparent;
+}
