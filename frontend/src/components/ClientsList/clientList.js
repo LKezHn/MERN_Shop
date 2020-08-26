@@ -6,7 +6,7 @@ import './ClientList.css';
 export default class ClientList extends Component{
     constructor(props){
         super(props);
-        this.uri = 'http://localhost:3400/api'
+        this.uri = 'http://localhost:3400/api';
         this.state = { clients : [] };
     }
 
@@ -19,14 +19,14 @@ export default class ClientList extends Component{
 
     render(){
         return(
-            <div className = 'container mx-auto'>
-                <div className='row'>{this.state.clients.map((client, i) => (
-                    <div className = 'col-4' key = {i}>
-                        <div className= 'card client' id = { client._id } >
-                            <h5 className= 'card-title client-name'>{client.name}</h5>
-                            <div className='card-body'>
-                                <h6 className='card-subtitle'>{client.username}</h6>
-                                <h6 className='card-text'>{client.email}</h6>
+            <div className = ''>
+                <div className=''>{this.state.clients.map((client, i) => (
+                    <div className = '' key = {i}>
+                        <div className= '' id = { client._id } >
+                            <h5 className= ''>{client.name}</h5>
+                            <div className=''>
+                                <h6 className=''>{client.username}</h6>
+                                <h6 className=''>{client.email}</h6>
                             </div>
                         </div>
                     </div>

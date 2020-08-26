@@ -1,16 +1,16 @@
 
 .navbar-div{
-    background-color: #e63946;
+    background-color: #3ab795;
     margin-bottom: 0%;
 }
 
 .nav-button{
     font-size: 120%;
-    color: #f1faee;
+    color: #edead0;
 }
 
 .nav-button:hover{
-    color: #a8dadc;
+    color: #ffcf56;
 }
 
 .Home{

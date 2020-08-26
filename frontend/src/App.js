@@ -4,6 +4,7 @@ import './App.css';
 
 import Header from './components/Header/header';
 import Home from './components/Home/home';
+import SignUp from './components/SignUp/signup';
 import ClientList from './components/ClientsList/clientList';
 import CompanyList from './components/CompanyList/companyList';
 
@@ -14,6 +15,7 @@ class App extends Component{
           <Router>
               <Header />
               <Route path="/" exact component={ Home } />
+              <Route path='/signup' component={ SignUp }/>
               <Route path='/clients' component={ ClientList } />
               <Route path='/companies' component={ CompanyList } />
           </Router>

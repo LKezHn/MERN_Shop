@@ -1,0 +1,11 @@
+.submit{
+    background-color: #3ab795;
+}
+
+.link{
+    color: #ffcf56;
+}
+
+.submit:hover{
+    background-color: #a0e8af;
+}
