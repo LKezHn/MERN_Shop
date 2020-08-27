@@ -4,32 +4,16 @@
     margin-bottom: 0%;
 }
 
-.nav-button{
+.nav-link{
     font-size: 120%;
     color: #edead0;
 }
 
-.nav-button:hover{
+.nav-link:hover{
     color: #ffcf56;
 }
 
-.Home{
-    border-color: transparent;
-    background-color: transparent;
-    cursor: pointer;
-    float: left;
-}
-
-.Clients{
-    border-color: transparent;
-    background-color: transparent;
-    cursor: pointer;
-    float: right;
-}
-
-.Companies{
-    border-color: transparent;
-    background-color: transparent;
-    cursor: pointer;
-    float: right;
+.nav-button:hover{
+    background-color: #edead0;
+    color: #3ab795;
 }

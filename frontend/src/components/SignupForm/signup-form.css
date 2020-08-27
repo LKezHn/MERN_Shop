@@ -1,11 +1,31 @@
+
+.input{
+    background-color: rgba(237, 234, 208, 0.9);
+    color: #3ab795;
+}
+
+.input:focus{
+    outline: none;
+    border: #3ab795 3px solid;
+}
+
+.text{
+    color: #edead0;
+}
 .submit{
     background-color: #3ab795;
+    color: #edead0;
 }
 
 .link{
     color: #ffcf56;
 }
 
+.link:hover{
+    color: #3ab795;
+}
+
 .submit:hover{
-    background-color: #a0e8af;
+    background-color: rgb(58, 170, 149);
+    color: #edead0;
 }

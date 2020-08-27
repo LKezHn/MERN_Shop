@@ -1,25 +1,25 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
 
 import Header from './components/Header/header';
 import Home from './components/Home/home';
 import SignUp from './components/SignUp/signup';
 import ClientList from './components/ClientsList/clientList';
-import CompanyList from './components/CompanyList/companyList';
+import CompanyList from './components/CompanyList/companiesList';
 
-class App extends Component{    
-  
-  render(){
-      return(
-          <Router>
-              <Header />
-              <Route path="/" exact component={ Home } />
-              <Route path='/signup' component={ SignUp }/>
-              <Route path='/clients' component={ ClientList } />
-              <Route path='/companies' component={ CompanyList } />
-          </Router>
-      )
+class App extends Component {
+
+  render() {
+    return (
+      <Router>
+        <Header />
+        <Route path="/" exact component={Home} />
+        <Route path='/signup' component={SignUp} />
+        <Route path='/clients' component={ClientList} />
+        <Route path='/companies' component={CompanyList} />
+      </Router>
+    )
   }
 }
 
