@@ -17,7 +17,7 @@ export default class Home extends Component {
           <div className='flex mb-3 flex-col lg:flex-row'>
             <div className="w-full lg:w-2/3 text-left pt-16 md:py-10 my-auto md:px-3 md:mx-3">
               <h3 className=' text-2xl md:text-4xl subtitle'><strong>You're not a company?</strong></h3>
-              <h5 className='text-lg md:text-2xl content'>Aqui iria info xd</h5>
+              <h5 className='text-lg md:text-2xl content'>Lorem ipsum dolor sit.</h5>
               <h5 className='text-lg md:text-2xl content'>Only register in our page and you can start to join our services.</h5>
             </div>
             <div className="w-full lg:w-1/3 py-0 md:py-10 md:px-3 md:mx-3 my-4 rounded-md card">
@@ -35,7 +35,8 @@ export default class Home extends Component {
                 Our services are the best in the market, you can comprobe this now.
               </h3>
               <h3 className="text-xl md:text-2xl service-content font-semibold mt-4">
-                You can register how client or company, you can buy or sell your product without any cost.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Cupiditate repellat, aspernatur ab sequi porro laudantium minima dolorum repellendus hic qui!
               </h3>
             </div>
             <div className="w-full text-left lg:w-1/2 pt-16 md:py-4 my-auto md:px-3 md:mx-3">
