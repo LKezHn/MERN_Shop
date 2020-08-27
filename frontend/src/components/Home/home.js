@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './home.css';
 
 import SignUpForm from '../SignupForm/signup-form';
-import second from '../../static/img/second.png';
+import second from '../../assets/img/second.png';
 export default class Home extends Component {
 
   render() {

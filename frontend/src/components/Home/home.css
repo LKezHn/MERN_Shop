@@ -5,7 +5,7 @@
 ** ****************************************************************/
 .signup-section{
     background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)
-    ),url(../../static/img/first.jpg);
+    ),url(../../assets/img/first.jpg);
     background-size: cover;
 }
 

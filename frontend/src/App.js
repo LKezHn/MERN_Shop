@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
 
 import Header from './components/Header/header';
+import Footer from './components/Footer/footer';
 import Home from './components/Home/home';
 import SignUp from './components/SignUp/signup';
 import ClientList from './components/ClientsList/clientList';
@@ -18,6 +19,7 @@ class App extends Component {
         <Route path='/signup' component={SignUp} />
         <Route path='/clients' component={ClientList} />
         <Route path='/companies' component={CompanyList} />
+        <Footer />
       </Router>
     )
   }
