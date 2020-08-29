@@ -1,4 +1,4 @@
 backend/node_modules
 backend/.env
-backend/public/
+backend/public/uploads
 frontend/node_modules
