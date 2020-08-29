@@ -2,9 +2,6 @@ const mongoose = require('mongoose');
 
 class Database{
     constructor(){
-        this.port = 27017;
-        this.host = 'localhost';
-        this.database = 'shop';
         this.connect();
     }
 
