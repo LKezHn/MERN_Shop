@@ -18,8 +18,12 @@ const schema = mongoose.Schema({
         type: String,
         required: false
     },
-    phone: {
-        type: Number,
+    banner: {
+        type: String,
+        required: false
+    },
+    logo: {
+        type: String,
         required: false
     }
 });
