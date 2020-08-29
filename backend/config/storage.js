@@ -12,4 +12,10 @@ const storage = multer.diskStorage(
   }
 );
 
-module.exports = storage;
+const fields = [
+  { name: 'banner', maxCount: 1 },    
+  { name: 'logo', maxCount: 1 },
+  { name: 'profilePhoto', maxCount: 1}    
+];
+
+module.exports = { storage, fields } ;
