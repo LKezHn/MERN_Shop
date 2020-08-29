@@ -1,13 +1,14 @@
 const express = require('express');
 const router = express.Router();
 const Client = require('../models/Client');
+const { addProfilePhoto, updateProfilePhoto } = require('../middlewares/clientsRefactorData');
 
 /* ***************** Clients API ***************** */
 
 // Obtener todos los clientes
 router.get('/clients', async function(req, res){
     const clients = await Client.find({},{
-        _id : true, username : true, email : true, name : true
+        password: false
     });
     res.send(clients);
 });
@@ -15,22 +16,23 @@ router.get('/clients', async function(req, res){
 // Obtener un solo Cliente por Username
 router.get('/clients/:id',function(req, res){
     Client.findOne( { _id: req.params.id},{
-        _id : true, username : true, email : true, name : true
+        password: false
     })
     .then( data => res.status(200).send(data))
     .catch( err => res.status(400).send(err));
 })
 
 // Agregar un cliente
-router.post("/clients",  function(req, res){
+router.post("/clients", addProfilePhoto,  function(req, res){
     let client = new Client( ({ name, address, email, logo, banner, password} = req.body ) );
     client.save().then( data => res.status(200).send(data) )
                   .catch( err => res.status(400).send(err));
     console.log("Post method in clients");
+    console.log(req)
 });
 
 // Update a client's information
-router.patch("/clients/:id", function(req, res){
+router.patch("/clients/:id", updateProfilePhoto, function(req, res){
     Client.updateOne({ _id: req.params.id },({ name, address, email, logo, banner, password} = req.body))
         .then( data => res.send(data))
         .catch( err => res.send(err));
