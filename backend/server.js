@@ -1,21 +1,27 @@
-//* Importing libraries
+// Importing environment variables
+require('dotenv').config();
+
+// Importing modules
 const express = require('express');
 const bodyParser = require('body-parser');
 const routes = require('./routers/principalRouter');
 const db = require('./config/database');
+const multer = require('multer');
 const cors = require('cors');
-const PORT = 3400;
-
+const storage = require('./config/storage');
 
 const app = express();
 
+// MIddlewares
 app.use(cors());
+app.use(multer({ storage: storage}).single('banner'));
+app.use(express.static('public'))
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use('/api', routes)
 
-app.listen(PORT, function(){
-    console.log(`Server is up in port ${PORT}!`);
+app.listen(process.env.PORT, function(){
+    console.log(`Server is up in port ${process.env.PORT}!`);
 });
 
 
