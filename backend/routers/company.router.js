@@ -5,68 +5,51 @@ const Company = require('../models/Company');
 /* ***************** Companies API ***************** */
 
 router.get("/companies", async function(req, res){
-    const companies = await Company.find();
+    const companies = await Company.find({},{
+        _id : true,
+        name: true,
+        address: true,
+        banner: true,
+        logo: true,
+        email: true
+    });
     res.send(companies);
     console.log("GET method in companies");
 });
 
-router.get("/companies/:name", async function(req, res){
-    const company = await Company.findOne({ name: req.params.name });
-    if(company){
-        res.send(company);
-        console.log("GET method in companies");
-    }else{
-        res.status(400).send({ error: 'Name not found'});
-    }
+router.get("/companies/:id", function(req, res){
+    Company.find({ _id: req.params.id },{
+        _id : true,
+        name: true,
+        address: true,
+        banner: true,
+        logo: true,
+        email: true
+    }).then( 
+        data => res.status(200).send(data)
+     ).catch( (err) =>{
+        res.status(400).send(err);
+    })
 });
 
-router.post("/companies", async function(req, res){
-    const company = new Company({
-        name: req.body.name,
-        password: req.body.password,
-        email: req.body.email,
-        address: req.body.address,
-        phone: req.body.phone
-    });
+router.post("/companies",  function(req, res){
+    let company = new Company( ({ name, address, email, logo, banner, password} = req.body ) );
 
-    await company.save();
-    res.send(company);
-    console.log("POSt method in companies");
+    company.save().then( data => res.status(200).send(data) )
+                  .catch( err => res.status(400).send(err));
+    console.log("Post method in companies");
 });
 
-router.patch("/companies/:name", async function(req, res){
-    const company = await Company.findOne({ name: req.params.name });
-    if(company){
-        if(req.body.name){
-            company.name = req.body.name;
-        }
-        if(req.body.password){
-            company.password = req.body.password;
-        }
-        if(req.body.email){
-            company.email = req.body.email;
-        }
-        if(req.body.address){
-            company.address = req.body.address;
-        }
-        if(req.body.phone){
-            company.phone = req.body.phone;
-        }
-        await company.save();
-        res.send(company);
-        console.log("PATCH method in companies");
-    }else{
-        res.status(400).send({ error: 'Name not found'})
-    }
-})
+router.patch("/companies/:id", function(req, res){
+    Company.updateOne({ _id: req.params.id },({ name, address, email, logo, banner, password} = req.body))
+        .then( data => res.send(data))
+        .catch( err => res.send(err));
+});
 
-router.delete("/companies/:name", async function(req,res){
-    try{
-        await Company.findOneAndDelete({ name: req.params.name});
-        res.status(200).send({ message: 'Company deleted'})
-    }catch{
-        res.status(200).send({ error: 'Name not found' });
-    }
+router.delete("/companies/:id", function(req,res){
+        Company.findOneAndDelete({ _id: req.params.id})
+            .then( data => res.status(200).send(data))
+            .catch( err => res.status(400).send({ err}));
 });
 
 module.exports = router;
